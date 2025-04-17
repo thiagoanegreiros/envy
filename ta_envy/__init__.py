@@ -1,10 +1,11 @@
+import os
 from pathlib import Path
 
 class Env:
     def __init__(self, required=None, dotenv_path=".env"):
-        self.vars = {}
+        self.vars = dict(os.environ)  # carrega tudo do ambiente real
         self.required = required or []
-        self._load(dotenv_path)
+        self._load(dotenv_path)       # sobrescreve com o que tiver no .env (se tiver)
         self._validate()
 
     def _load(self, path):
@@ -25,7 +26,7 @@ class Env:
         if value is None:
             return None
         if type == bool:
-            return value.lower() in ["1", "true", "yes", "on"]
+            return str(value).lower() in ["1", "true", "yes", "on"]
         if type == list:
             return [v.strip() for v in value.split(",")]
         return type(value)

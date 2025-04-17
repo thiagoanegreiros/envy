@@ -1,6 +1,6 @@
 [project]
 name = "ta-envy"
-version = "0.1.0"
+version = "0.1.1"
 description = "A minimal environment variable loader with validation and typing"
 authors = [{ name = "Thiago Ananias" }]
 readme = "README.md"
