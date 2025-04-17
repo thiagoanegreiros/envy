@@ -1,5 +1,5 @@
 [project]
-name = "envy"
+name = "ta-envy"
 version = "0.1.0"
 description = "A minimal environment variable loader with validation and typing"
 authors = [{ name = "Thiago Ananias" }]
@@ -10,6 +10,9 @@ keywords = ["env", "dotenv", "configuration", "settings"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "build>=1.2.2.post1",
 ]
 
 [build-system]

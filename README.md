@@ -1,6 +1,6 @@
 # envy
 
-**envy** is a minimal, dependency-free environment variable loader for Python.  
+**ta-envy** is a minimal, dependency-free environment variable loader for Python.  
 It reads `.env` files, validates required variables, and converts values to the correct type.
 
 ## 🚀 Features
@@ -16,3 +16,7 @@ It reads `.env` files, validates required variables, and converts values to the 
 uv venv
 source .venv/bin/activate
 uv pip install .
+
+## Sen package to pypi
+.venv/bin/python -m build
+twine upload dist/*

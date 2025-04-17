@@ -1,4 +1,4 @@
-from envy import Env
+from ta_envy import Env
 import tempfile
 
 def test_envy_loading():
