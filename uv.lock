@@ -33,17 +33,6 @@ wheels = [
 ]
 
 [[package]]
-name = "envy"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "build" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "build", specifier = ">=1.2.2.post1" }]
-
-[[package]]
 name = "importlib-metadata"
 version = "8.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -90,6 +79,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/e7/82/28175b2414effca1c
 wheels = [
     { url = "https://files.pythonhosted.org/packages/bd/24/12818598c362d7f300f18e74db45963dbcb85150324092410c8b49405e42/pyproject_hooks-1.2.0-py3-none-any.whl", hash = "sha256:9e5c6bfa8dcc30091c74b0cf803c81fdd29d94f01992a7707bc97babb1141913", size = 10216 },
 ]
+
+[[package]]
+name = "ta-envy"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "build" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "build", specifier = ">=1.2.2.post1" }]
 
 [[package]]
 name = "tomli"

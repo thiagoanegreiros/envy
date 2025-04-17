@@ -18,5 +18,5 @@ source .venv/bin/activate
 uv pip install .
 
 ## Sen package to pypi
-.venv/bin/python -m build
+uv run  python -m build
 twine upload dist/*
