@@ -9,8 +9,9 @@ class Env:
         self._validate()
 
     def _load(self, path):
-        if Path(path).exists():
-            with open(path) as f:
+        path = Path(path)
+        if path.is_file():  # Garante que é um arquivo antes de abrir
+            with path.open() as f:
                 for line in f:
                     if "=" in line and not line.strip().startswith("#"):
                         k, v = line.strip().split("=", 1)
